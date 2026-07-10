@@ -3,94 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For You 🤍</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
 }
 
 body{
-background:#000;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
-color:white;
+    background:#000;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
 }
 
 .container{
-text-align:center;
-padding:30px;
-animation:fadeIn 1.5s ease;
+    text-align:center;
+    animation:fadeIn 1.5s ease;
 }
 
 h1{
-font-size:38px;
-margin-bottom:20px;
-font-weight:bold;
+    font-size:38px;
+    margin-bottom:20px;
 }
 
 p{
-font-size:24px;
-color:#f8c8dc;
-margin-bottom:50px;
+    font-size:24px;
+    color:#ff8c8d;
+    margin-bottom:50px;
 }
 
 button{
-padding:15px 45px;
-font-size:18px;
-border:none;
-border-radius:50px;
-background:white;
-color:black;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
+    padding:15px 45px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d88;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover{
-transform:scale(1.05);
+    transform:scale(1.05);
+    background:#ff2f75;
 }
 
 @keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 </style>
 </head>
+
+<body>
+
 <audio id="bgMusic" loop>
     <source src="Innum-Konjam-Naeram-BG-Musiq.mp3" type="audio/mpeg">
 </audio>
 
-<script>
-document.addEventListener("click", function () {
-    document.getElementById("bgMusic").play();
-}, { once: true });
-</script>
-<body>
-
 <div class="container">
 
-<h1>Hey there!! 🌙</h1>
+<h1>Hey there!! 🌙🤍</h1>
 
-<p>This one's for yuhhh! 💗🤌🏻</p>
+<p>This one's for yuhhh! ❤️🫶</p>
 
-<button onclick="window.location.href='page3.html'">
-Continue ✨
-</button>
+<button id="continueBtn">Continue ✨</button>
 
 </div>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+document.body.addEventListener("click", () => {
+    music.play().catch(err => console.log(err));
+}, { once: true });
+
+document.getElementById("continueBtn").onclick = () => {
+    window.location.href = "page3.html";
+};
+</script>
 
 </body>
 </html>
