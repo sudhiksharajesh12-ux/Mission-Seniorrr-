@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top of my FAV 🤎</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:#fff;
+}
+
+.container{
+    width:90%;
+    max-width:420px;
+    text-align:center;
+    animation:fadeIn 1.2s ease;
+}
+
+img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(255,255,255,.15);
+}
+
+.caption{
+    margin-top:25px;
+    font-size:28px;
+    font-weight:600;
+    line-height:1.5;
+}
+
+.highlight{
+    color:#c49a6c;
+}
+
+.next-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 32px;
+    background:#fff;
+    color:#111;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.next-btn:hover{
+    transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Change the filename below -->
+    <img src="Screenshot_20260710_130714.jpg" alt="guruvayoor Photo">
+
+    <div class="caption">
+        By the way...<br>
+        <span class="highlight">Top of my "FAV"!!! 🤌🏻🤎</span>
+    </div>
+
+    <a href="page10.html" class="next-btn">
+        One Last Message 💌
+    </a>
+
+</div>
+
+</body>
+</html>
