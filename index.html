@@ -10,96 +10,81 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
 background:#000;
+color:#fff;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
 overflow:hidden;
-color:white;
 }
 
-.container{
+.page{
 text-align:center;
-animation:fade 1.5s ease;
+padding:25px;
+max-width:380px;
+animation:fade 1s;
 }
 
 .cat{
 font-size:90px;
-animation:walk 2s infinite ease-in-out;
+animation:bounce 2s infinite;
 }
 
 .meow{
 font-size:22px;
 margin-top:10px;
-opacity:0;
-animation:show 1s forwards;
-animation-delay:.5s;
+opacity:.8;
 }
 
 .hello{
 font-size:34px;
 margin-top:15px;
 font-weight:bold;
-opacity:0;
-animation:show 1s forwards;
-animation-delay:1.8s;
 }
 
-button{
+.btn{
 margin-top:35px;
-padding:15px 45px;
-font-size:18px;
+padding:14px 38px;
 border:none;
-border-radius:40px;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
 background:white;
 color:black;
 cursor:pointer;
-font-weight:bold;
-opacity:0;
-animation:show 1s forwards;
-animation-delay:3s;
-transition:.3s;
 }
 
-button:hover{
-transform:scale(1.08);
+.btn:hover{
+transform:scale(1.05);
 }
 
-@keyframes walk{
-0%,100%{
-transform:translateY(0);
-}
+@keyframes bounce{
 50%{
 transform:translateY(-10px);
-}
-}
-
-@keyframes show{
-to{
-opacity:1;
 }
 }
 
 @keyframes fade{
 from{
 opacity:0;
+transform:translateY(20px);
 }
 to{
 opacity:1;
+transform:translateY(0);
 }
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<div class="page" id="page1">
 
 <div class="cat">🐱</div>
 
@@ -111,16 +96,55 @@ Meow... 🐾
 Hellooo Seniorrrr! 👋
 </div>
 
-<button onclick="openPage()">
+<button class="btn" onclick="nextPage()">
 OPEN 🤍
 </button>
 
 </div>
 
 <script>
-function openPage(){
-window.location.href="page2.html";
+
+function nextPage(){
+
+document.getElementById("page1").innerHTML=`
+
+<h1 style="font-size:38px;">🌙</h1>
+
+<h2 style="margin-top:20px;">
+Welcome, Seniorrrr!
+</h2>
+
+<p style="margin-top:25px;
+line-height:1.8;
+font-size:20px;
+color:#ddd;">
+
+Indha website-ku
+ore oru purpose dhaan... 🤍
+
+<br><br>
+
+Konjam neram
+relax pannunga...
+
+Enjoy the journey. ✨
+
+</p>
+
+<button class="btn" onclick="pageThree()">
+Continue →
+</button>
+
+`;
+
 }
+
+function pageThree(){
+
+// PART 2 starts here
+
+}
+
 </script>
 
 </body>
