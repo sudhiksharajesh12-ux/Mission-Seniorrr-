@@ -1,151 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission : Make Senior Smile 🤍</title>
+<div class="container">
+    <h1 id="meow">🐱 Meow...</h1>
+    <p id="hello"></p>
+
+    <button id="openBtn" onclick="window.location.href='page2.html'">
+        OPEN
+    </button>
+</div>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#000;
-color:#fff;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
+    margin:0;
+    background:#fff7f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
 }
 
-.page{
-text-align:center;
-padding:25px;
-max-width:380px;
-animation:fade 1s;
+.container{
+    text-align:center;
 }
 
-.cat{
-font-size:90px;
-animation:bounce 2s infinite;
+#meow{
+    font-size:55px;
 }
 
-.meow{
-font-size:22px;
-margin-top:10px;
-opacity:.8;
+#hello{
+    font-size:35px;
+    color:#ff4f81;
+    font-weight:bold;
+    margin-top:10px;
 }
 
-.hello{
-font-size:34px;
-margin-top:15px;
-font-weight:bold;
-}
-
-.btn{
-margin-top:35px;
-padding:14px 38px;
-border:none;
-border-radius:30px;
-font-size:18px;
-font-weight:bold;
-background:white;
-color:black;
-cursor:pointer;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-@keyframes bounce{
-50%{
-transform:translateY(-10px);
-}
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+button{
+    display:none;
+    margin-top:40px;
+    padding:15px 45px;
+    border:none;
+    border-radius:30px;
+    background:#ff4f81;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
 }
 </style>
-</head>
-
-<body>
-
-<div class="page" id="page1">
-
-<div class="cat">🐱</div>
-
-<div class="meow">
-Meow... 🐾
-</div>
-
-<div class="hello">
-Hellooo Seniorrrr! 👋
-</div>
-
-<button class="btn" onclick="nextPage()">
-OPEN 🤍
-</button>
-
-</div>
 
 <script>
+setTimeout(()=>{
+    document.getElementById("hello").innerHTML="Hellooo Seniorrr 👋";
+},1500);
 
-function nextPage(){
-
-document.getElementById("page1").innerHTML=`
-
-<h1 style="font-size:38px;">🌙</h1>
-
-<h2 style="margin-top:20px;">
-Welcome, Seniorrrr!
-</h2>
-
-<p style="margin-top:25px;
-line-height:1.8;
-font-size:20px;
-color:#ddd;">
-
-Indha website-ku
-ore oru purpose dhaan... 🤍
-
-<br><br>
-
-Konjam neram
-relax pannunga...
-
-Enjoy the journey. ✨
-
-</p>
-
-<button class="btn" onclick="pageThree()">
-Continue →
-</button>
-
-`;
-
-}
-
-function pageThree(){
-
-// PART 2 starts here
-
-}
-
+setTimeout(()=>{
+    document.getElementById("openBtn").style.display="inline-block";
+},3000);
 </script>
-
-</body>
-</html>
